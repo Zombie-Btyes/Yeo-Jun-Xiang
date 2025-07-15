@@ -31,10 +31,10 @@ console.log(disneyData);
 // Question 5 answer Strong Bullish
 const bacData = [190.15, 194.21, 191.07, 192.44, 129000];
 if (bacData[3] > bacData[2]) {
-	console.log("Strong Bullish");
+	console.log("Bullish");
 }
 else if (bacData[3] < bacData[2]) {
-    console.log("Strong Bearish");
+    console.log("Bearish");
 }
 else if (bacData[3] === bacData[2]) {
     console.log("Neutral");
