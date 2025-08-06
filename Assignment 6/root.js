@@ -10,28 +10,29 @@ function Header() {
 }
 
 
-function PublicBlogPost({title, author, date, content}) {
+function PublicBlogPost({ title, author, date, content }) {
   return (
-    <article>
+    <article className="blog-post">
       <h2>{title}</h2>
-      <p><strong>Author:</strong> {author}</p>
-      <p><strong>Date:</strong> {date}</p>
+      <p className="meta"><strong>Author:</strong> {author}</p>
+      <p className="meta"><strong>Date:</strong> {date}</p>
       <p>{content}</p>
     </article>
   );
-
 }
+
 
 function PrivateBlogPost({ title, author, date }) {
   return (
     <div className="private-posts">
       <h2>{title}</h2>
-      <p><strong>By:</strong> {author}</p>
-      <p><em>{date}</em></p>
+      <p className="meta"><strong>By:</strong> {author}</p>
+      <p className="meta"><em>{date}</em></p>
       <p><em>This blog post is private.</em></p>
     </div>
   );
 }
+
 
 function BlogList({ blogPosts }) {
   return (
@@ -105,12 +106,12 @@ function App() {
       isPrivate: false
     }
   ];
-  return (
-    <>
+   return (
+    <div className="app">
       <Header />
       <BlogList blogPosts={blogPosts} />
       <Footer />
-    </>
+    </div>
   );
 
 };
